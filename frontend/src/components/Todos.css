@@ -2,20 +2,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 150%;
     margin-bottom: 12px;
   }
   
   .form input[type="text"] {
+    margin-top: 17px;
     padding: 10px;
-    width: 60%;
+    width: 100%;
     border: 1px solid #eee;
     border-radius: 6px;
   }
   
   .form select.form-select {
+    margin: 10%;
     padding: 10px;
-    width: 25%;
+    width: 70%;
     border: 1px solid #eee;
     border-radius: 6px;
   }
@@ -44,7 +46,7 @@
   }
   
   .todo-listItems {
-    width: 100%;
+    width: 150%;
     display: flex;
     flex-direction: column;
   }
@@ -54,14 +56,17 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+   
   }
   
   .item-content {
-    width: 40%;
+    width: 50%;
+    margin-right: 10px;
   }
   
   .item-status {
     width: 20%;
+    margin-right: 10px; 
   }
   
   .todo-item button {
@@ -69,6 +74,7 @@
     border-radius: 6px;
     cursor: pointer;
     padding: 8px;
+    margin-right: 12px;
   }
   
   .todo-item button:focus {
