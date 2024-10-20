@@ -66,19 +66,28 @@ This is a simple Todo List application built using React, Node.js, Express, and 
 
 
 ## Project Structure
-- Backend
-    - models/todoItems.js: Mongoose schema and model for todo items.
-    - routes/todoItems.js: Express routes for CRUD operations on todo items.
+- Backend  
+    - models/Todos.js: Mongoose schema and model for todo items.  
+    - models/Users.js: Mongoose schema and model for user accounts.  
+    - routes/Todos.js: Express routes for CRUD operations on todo items.  
+    - routes/User.js: Express routes for user authentication and registration.  
     - server.js: Entry point for the Express server.
 
-- Frontend
-    - src/App.js: Main React component containing the application logic.
-    - src/App.css: CSS file for styling the application.
-
+- Frontend  
+    - src/App.js: Main React component containing the application logic.  
+    - src/App.css: CSS file for styling the application.  
+    - components/Auth.js: Login form for user authentication.  
+    - components/Register.js: Registration form for new users.  
+    - components/Todo.js: Component to display and manage todo items.
+      
 
 ## Sample Screenshot
 
 ### Frontend
+
+![image](https://github.com/user-attachments/assets/6ed7987d-3f4c-46de-9e85-05f6231b28a5)
+
+![image](https://github.com/user-attachments/assets/3d125772-220d-468c-913e-5f8510e40999)
 
 ![image](https://github.com/murlipatel1/todo-list-mern/assets/100035961/7924490c-694b-4325-b621-15013672032b)
 
