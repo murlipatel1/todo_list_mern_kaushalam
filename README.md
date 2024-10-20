@@ -26,6 +26,10 @@ This is a simple Todo List application built using React, Node.js, Express, and 
   - MongoDB Atlas
   - AWS Cluster
 
+### Sample Login:
+  - username: murli@gmail.com
+  - password: 12345
+
 ## Installation
 
 ### Prerequisites
