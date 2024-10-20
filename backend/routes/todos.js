@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const todoItemsModel = require('../models/Todos');
+const todos = require('../models/Todos');
 const authenticateToken = require('../middleware/auth');
 
 // Add Todo Item 
 router.post('/item', authenticateToken, async (req, res) => {
   try {
-    const newItem = new todoItemsModel({
+    const newItem = new todos({
       item: req.body.item,
       status: req.body.status || 'pending',
       userId: req.user._id  // Save the user ID to associate with the todo item
@@ -20,7 +20,7 @@ router.post('/item', authenticateToken, async (req, res) => {
 // Get All Todo Items 
 router.get('/items', authenticateToken, async (req, res) => {
   try {
-    const allTodoItems = await todoItemsModel.find({ userId: req.user._id });
+    const allTodoItems = await todos.find({ userId: req.user._id });
     res.status(200).json(allTodoItems);
   } catch (err) {
     res.json(err);
@@ -30,7 +30,7 @@ router.get('/items', authenticateToken, async (req, res) => {
 // Update Todo Item 
 router.put('/item/:id', authenticateToken, async (req, res) => {
   try {
-    const updateItem = await todoItemsModel.findOneAndUpdate(
+    const updateItem = await todos.findOneAndUpdate(
       { _id: req.params.id, userId: req.user._id },
       { $set: req.body },
       { new: true }
@@ -44,7 +44,7 @@ router.put('/item/:id', authenticateToken, async (req, res) => {
 // Delete Todo Item 
 router.delete('/item/:id', authenticateToken, async (req, res) => {
   try {
-    const deleteItem = await todoItemsModel.findOneAndDelete({ _id: req.params.id, userId: req.user._id });
+    const deleteItem = await todos.findOneAndDelete({ _id: req.params.id, userId: req.user._id });
     res.status(200).json('Item Deleted');
   } catch (err) {
     res.json(err);
