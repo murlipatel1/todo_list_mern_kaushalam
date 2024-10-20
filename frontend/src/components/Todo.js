@@ -18,7 +18,7 @@ function Todo() {
   const addItem = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/todos/item' , {
+      const res = await axios.post('https://todo-list-mern-kaushalam.vercel.app/api/todos/item' , {
         item: itemText,
         status: itemStatus,
       },{
@@ -39,7 +39,7 @@ function Todo() {
   useEffect(() => {
     const getItemsList = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/todos/items',{
+        const res = await axios.get('https://todo-list-mern-kaushalam.vercel.app/api/todos/items',{
           headers: {
             'Authorization': token, // Add the token to the Authorization header
             'Content-Type': 'application/json', // Set the content type
@@ -56,7 +56,7 @@ function Todo() {
   // Delete item when clicked on delete
   const deleteItem = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/todos/item/${id}`,{
+      await axios.delete(`https://todo-list-mern-kaushalam.vercel.app/api/todos/item/${id}`,{
         headers: {
           'Authorization': token, // Add the token to the Authorization header
           'Content-Type': 'application/json', // Set the content type
@@ -73,7 +73,7 @@ function Todo() {
   const updateItem = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put(`http://localhost:5000/api/todos/item/${isUpdating}`, {
+      const res = await axios.put(`https://todo-list-mern-kaushalam.vercel.app/api/todos/item/${isUpdating}`, {
         item: updateItemText,
         status: updateItemStatus,
       },{
