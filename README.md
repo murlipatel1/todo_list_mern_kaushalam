@@ -20,6 +20,11 @@ This is a simple Todo List application built using React, Node.js, Express, and 
   - Node.js
   - Express
   - Mongoose (for MongoDB interaction)
+  - 
+- **Deployment:**
+  - Vercel
+  - MongoDB Atlas
+  - AWS Cluster
 
 ## Installation
 
