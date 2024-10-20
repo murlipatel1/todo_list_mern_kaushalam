@@ -9,6 +9,9 @@ const todoRoute = require('./routes/todos');
 
 // Initialize app
 const app = express();
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
 
 // Load environment variables from .env file
 dotenv.config();
