@@ -1,4 +1,4 @@
-# Todo List Application
+# Todo List MERN Application
 
 This is a simple Todo List application built using React, Node.js, Express, and MongoDB. It allows users to add, update, delete, and search for todo items. Each todo item has a name and a status which can be either "pending", "in progress", or "completed".
 
@@ -33,17 +33,17 @@ This is a simple Todo List application built using React, Node.js, Express, and 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/todo-list-app.git
+   git clone https://github.com/murlipatel1/todo_list_mern_kaushalam.git
    cd todo-list-app
 
 2. **Install dependencies:**
     ```bash
-    cd server
+    cd backend
     npm install
     ```
 
     ```bash
-    cd client
+    cd frontend
     npm install
     ```
 
